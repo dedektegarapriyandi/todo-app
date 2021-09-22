@@ -54,5 +54,21 @@ getTodo = () => {
     });
 }
 
+actionTodo = (e) => {
+    const element = e.target;
+    if(element.classList.contains("delete-btn")) {
+        todos = JSON.parse(localStorage.getItem("todos"));
+
+        const items = element.parentElement;
+        const itemIndex = items.children[0].innerText;
+
+        todos.splice(todos.indexOf(itemIndex), 1);
+        localStorage.setItem("todos", JSON.stringify(todos));
+
+        document.location.reload();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", getTodo);
 submit.addEventListener("click", addTodo);
+todoList.addEventListener("click", actionTodo);
