@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+
+    <style>
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -15,6 +24,17 @@
         <input type="text" class="todo-inpute" autofocus>
         <button class="submit-btn">Add</button>
     </form>
+
+    <ul class="todo-list">
+        <div class="todo-item">
+            <li class="item-name">Dedek</li>
+            <button class="delete-btn">delete</button>
+        </div>
+        <div class="todo-item">
+            <li class="item-name">Dedek</li>
+            <button class="delete-btn">delete</button>
+        </div>
+    </ul>
 
     <script src="./script.js"></script>
 </body>
