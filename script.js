@@ -47,6 +47,7 @@ getTodo = () => {
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
         deleteBtn.innerText = "delete";
+        todoDiv.appendChild(deleteBtn);
 
         // merged list to todo list
         todoList.appendChild(todoDiv);
