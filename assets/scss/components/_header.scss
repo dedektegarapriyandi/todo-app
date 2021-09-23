@@ -1,7 +1,6 @@
 @use "../mixin" as mix;
 
 .header {
-    display: flex;
     @include mix.flexBox(row, center, center);
     height: 20vh;
 
