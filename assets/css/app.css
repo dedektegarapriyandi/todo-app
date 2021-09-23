@@ -10,6 +10,28 @@
   font-weight: 400;
 }
 
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem 0;
+}
+.form .todo-input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: darkgrey;
+}
+.form .submit-btn {
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;

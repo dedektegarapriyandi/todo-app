@@ -1,0 +1,22 @@
+@use "../mixin" as mix;
+
+.form {
+    @include mix.flexBox(row, center);
+    padding: 2rem 0;
+
+    .todo-input {
+        font-size: 1rem;
+        padding: .5rem;
+        outline: none;
+        border: none;
+        background-color: darkgrey;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: .5em .8em;
+        border: none;
+        background-color: blue;
+        color: white;
+    }
+}
