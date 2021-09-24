@@ -42,8 +42,14 @@ getTodo = () => {
         itemName.classList.add("item-name");
         itemName.innerText = todo;
         todoDiv.appendChild(itemName);
-
-        // button 
+        
+        // button delete
+        const checkBtn = document.createElement("button");
+        checkBtn.classList.add("check-btn");
+        checkBtn.innerText = "check";
+        todoDiv.appendChild(checkBtn);
+        
+        // button delete
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
         deleteBtn.innerText = "delete";
