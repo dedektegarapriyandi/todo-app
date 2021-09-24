@@ -46,13 +46,13 @@ getTodo = () => {
         // button delete
         const checkBtn = document.createElement("button");
         checkBtn.classList.add("check-btn");
-        checkBtn.innerText = "check";
+        checkBtn.innerHTML = "<i class='fa fa-check'></i>";
         todoDiv.appendChild(checkBtn);
 
         // button delete
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
-        deleteBtn.innerText = "delete";
+        deleteBtn.innerHTML = "delete";
         todoDiv.appendChild(deleteBtn);
 
         // merged list to todo list
