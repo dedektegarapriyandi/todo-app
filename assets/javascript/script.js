@@ -52,7 +52,7 @@ getTodo = () => {
         // button delete
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
-        deleteBtn.innerHTML = "delete";
+        deleteBtn.innerHTML = "<i class='fa fa-trash'></i>";
         todoDiv.appendChild(deleteBtn);
 
         // merged list to todo list

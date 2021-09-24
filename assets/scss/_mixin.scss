@@ -4,3 +4,11 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin btnHover($background: black) {
+    &:hover {
+        background-color: darken($background, 10);
+        
+        transition: .3s ease;
+    }
+}

@@ -46,14 +46,27 @@
   justify-content: start;
   align-items: start;
   width: 20%;
-  padding: 0.5em;
-  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 0.5em 0;
 }
 .todo-list .todo-item .item-name {
   flex: 1;
   text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0.5em;
+}
+.todo-list .todo-item .delete-btn {
+  font-size: 1rem;
+  padding: 0.5em;
+  background-color: #dd2c2c;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.todo-list .todo-item .delete-btn:hover {
+  background-color: #b81e1e;
+  transition: 0.3s ease;
 }
 .todo-list .todo-item .completed {
   text-decoration: line-through;
@@ -65,6 +78,10 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+.fa {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=app.css.map */
