@@ -1,0 +1,13 @@
+@use "../mixin" as mix;
+
+.todo-filter {
+    @include mix.flexBox(row, center);
+    margin-bottom: 2em;
+
+    .select {
+        outline: none;
+        border: none;
+        padding: .5em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
