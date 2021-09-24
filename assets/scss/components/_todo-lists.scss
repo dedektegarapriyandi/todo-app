@@ -17,5 +17,10 @@
             flex: 1;
             text-transform: capitalize;
         }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: .5;
+        }
     }
 }

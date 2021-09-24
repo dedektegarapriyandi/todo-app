@@ -48,7 +48,7 @@ getTodo = () => {
         checkBtn.classList.add("check-btn");
         checkBtn.innerText = "check";
         todoDiv.appendChild(checkBtn);
-        
+
         // button delete
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
@@ -72,6 +72,9 @@ actionTodo = (e) => {
         localStorage.setItem("todos", JSON.stringify(todos));
 
         document.location.reload();
+    } else if(element.classList.contains("check-btn")) {
+        itemChecked = element.parentElement.children[0];
+        itemChecked.classList.toggle("completed");
     }
 }
 
