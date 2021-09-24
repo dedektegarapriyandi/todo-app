@@ -26,6 +26,8 @@
             border: none;
             color: white;
             cursor: pointer;
+
+            @include mix.btnHover(rgb(221, 44, 44));
         }
     }
 }

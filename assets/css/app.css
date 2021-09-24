@@ -64,12 +64,20 @@
   color: white;
   cursor: pointer;
 }
+.todo-list .todo-item .delete-btn:hover {
+  background-color: #b81e1e;
+  transition: 0.3s ease;
+}
 
 * {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+.fa {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=app.css.map */
