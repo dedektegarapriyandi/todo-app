@@ -1,6 +1,7 @@
 const input = document.querySelector(".todo-input");
 const submit = document.querySelector(".submit-btn");
-const todoList = document.querySelector(".todo-list")
+const todoList = document.querySelector(".todo-list");
+const filterBtn = document.querySelector(".todo-filter");
 
 addTodo = (e) => {
     e.preventDefault();
@@ -78,6 +79,35 @@ actionTodo = (e) => {
     }
 }
 
+filterTodo = (e) => {
+    const items = todoList.childNodes;
+    items.forEach((item) => {
+        const filter = e.target.value;
+        const itemName = item.children[0];
+
+        switch(filter) {
+            case "all" :
+                item.style.display = "flex";
+                break;
+            case "completed":
+                if(itemName.classList.contains("completed")) {
+                    item.style.display = "flex";
+                }else {
+                    item.style.display = "none";
+                }
+                break;
+            case "uncompleted":
+                if(!itemName.classList.contains("completed")) {
+                    item.style.display = "flex";
+                }else {
+                    item.style.display = "none";
+                }
+                break;
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", getTodo);
 submit.addEventListener("click", addTodo);
 todoList.addEventListener("click", actionTodo);
+filterBtn.addEventListener("change", filterTodo);
