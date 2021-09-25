@@ -69,10 +69,18 @@ actionTodo = (e) => {
         const items = element.parentElement;
         const itemIndex = items.children[0].innerText;
 
+        const deleteBtn = e.target;
+
+        if(deleteBtn.classList.contains("delete-btn")) {
+            const parent = deleteBtn.parentElement;
+            parent.classList.add("removed");
+            parent.addEventListener("transitionend", () => {
+                parent.remove();
+            })
+        }
+        
         todos.splice(todos.indexOf(itemIndex), 1);
         localStorage.setItem("todos", JSON.stringify(todos));
-
-        document.location.reload();
     } else if(element.classList.contains("check-btn")) {
         itemChecked = element.parentElement.children[0];
         itemChecked.classList.toggle("completed");
