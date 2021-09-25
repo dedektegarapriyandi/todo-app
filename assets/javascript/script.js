@@ -3,6 +3,33 @@ const submit = document.querySelector(".submit-btn");
 const todoList = document.querySelector(".todo-list");
 const filterBtn = document.querySelector(".todo-filter");
 
+createElement = (todo) => {
+    // div
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo-item");
+
+    // item name
+    const itemName = document.createElement("li");
+    itemName.classList.add("item-name");
+    itemName.innerText = todo;
+    todoDiv.appendChild(itemName);
+    
+    // button check
+    const checkBtn = document.createElement("button");
+    checkBtn.classList.add("check-btn");
+    checkBtn.innerHTML = "<i class='fa fa-check'></i>";
+    todoDiv.appendChild(checkBtn);
+
+    // button delete
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.innerHTML = "<i class='fa fa-trash'></i>";
+    todoDiv.appendChild(deleteBtn);
+
+    // merged list to todo list
+    todoList.appendChild(todoDiv);
+}
+
 addTodo = (e) => {
     e.preventDefault();
 
@@ -17,11 +44,11 @@ addTodo = (e) => {
     if (item === "") {
         alert("tidak boleh kosong");
     }else {
+        createElement(item);
+
         todos.push(item);
         localStorage.setItem("todos", JSON.stringify(todos));
         input.value = "";
-
-        document.location.reload();
     }
 }
 
@@ -34,30 +61,7 @@ getTodo = () => {
     }
 
     todos.forEach((todo) => {
-        // div
-        const todoDiv = document.createElement("div");
-        todoDiv.classList.add("todo-item");
-
-        // item name
-        const itemName = document.createElement("li");
-        itemName.classList.add("item-name");
-        itemName.innerText = todo;
-        todoDiv.appendChild(itemName);
-        
-        // button delete
-        const checkBtn = document.createElement("button");
-        checkBtn.classList.add("check-btn");
-        checkBtn.innerHTML = "<i class='fa fa-check'></i>";
-        todoDiv.appendChild(checkBtn);
-
-        // button delete
-        const deleteBtn = document.createElement("button");
-        deleteBtn.classList.add("delete-btn");
-        deleteBtn.innerHTML = "<i class='fa fa-trash'></i>";
-        todoDiv.appendChild(deleteBtn);
-
-        // merged list to todo list
-        todoList.appendChild(todoDiv);
+        createElement(todo);
     });
 }
 
