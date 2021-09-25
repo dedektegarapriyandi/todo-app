@@ -22,7 +22,7 @@
   padding: 0.5rem;
   outline: none;
   border: none;
-  width: 30%;
+  width: 30vmax;
   background-color: darkgrey;
 }
 .form .submit-btn {
@@ -37,16 +37,20 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   list-style: none;
   padding: 1em;
+  max-height: 50vh;
+  margin: auto;
+  width: 35vmax;
+  overflow-x: hidden;
 }
 .todo-list .todo-item {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  width: 35%;
+  width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 0.5em 0;
   animation: fall 0.5s;
@@ -103,6 +107,28 @@
     opacity: 1;
   }
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover:hover {
+  background-color: #0000cc;
+  transition: 0.3s ease;
+}
+
 .todo-filter {
   display: flex;
   flex-direction: row;

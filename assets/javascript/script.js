@@ -26,6 +26,10 @@ createElement = (todo) => {
     deleteBtn.innerHTML = "<i class='fa fa-trash'></i>";
     todoDiv.appendChild(deleteBtn);
 
+    if(todoDiv.style.maxHeight > "50vh") {
+        todoDiv.style.overflowY = "scroll";
+    }
+
     // merged list to todo list
     todoList.insertBefore(todoDiv, todoList.childNodes[0]);
 }
