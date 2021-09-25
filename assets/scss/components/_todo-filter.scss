@@ -4,6 +4,10 @@
     @include mix.flexBox(row, center);
     margin-bottom: 2em;
 
+    @media screen and (max-width: 600px) {
+        margin-bottom: 1rem;
+    }
+
     .select {
         outline: none;
         border: none;

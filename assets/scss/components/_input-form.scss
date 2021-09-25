@@ -4,7 +4,7 @@
     @include mix.flexBox(row, center);
     padding: 2rem 0;
     @media screen and (max-width: 600px) {
-        padding: 1rem 0;
+        padding: 0 0 1rem;
     }
 
     .todo-input {
