@@ -9,6 +9,10 @@
     width: 35vmax;
     overflow-x: hidden;
 
+    @media screen and (max-width: 768px) {
+        width: 85vmin;
+    }
+
     .todo-item {
         @include mix.flexBox();
         width: 100%;
