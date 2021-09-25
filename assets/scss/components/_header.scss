@@ -4,6 +4,10 @@
     @include mix.flexBox(row, center, center);
     height: 20vh;
 
+    @media screen and (max-width: 600px) {
+        height: 15vh;
+    }
+
     h1 {
         font-size: 2rem;
         font-weight: 400;
