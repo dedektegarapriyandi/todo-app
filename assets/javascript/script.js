@@ -27,7 +27,7 @@ createElement = (todo) => {
     todoDiv.appendChild(deleteBtn);
 
     // merged list to todo list
-    todoList.appendChild(todoDiv);
+    todoList.insertBefore(todoDiv, todoList.childNodes[0]);
 }
 
 addTodo = (e) => {
